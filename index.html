@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>TTS</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <py-config type="json">
+        {
+          "packages": ["gTTS", "playsound"]
+        }
+    </py-config>
+
   </head>
-  <body>
-    <h1 style="TEXT-align:center"> <strong>TEXT TO SPEECH USING PYTHON NOTEBOOK</strong> </h1>
-  </body>
+
+  <body class="container">
+  <py-script src="./tts.py">  </py-script>
+
+
+</body>
 </html>
