@@ -4,36 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Browser voices</title>
+    <title>Species Predictor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
 
   </head>
       <body>
-
-          <header>
-              <h1>Text to Speech</h1>
-          </header>
-
         <main>
-          <form class="input" id="voice-form" action="/result" method="POST">
-                <div class="field">
-                    <label for="speech">Type Something</label>
-                    <input type="text" name="speech" id="speech" required />
-                </div>
-              <button>
-                    Convert to Audio
-              </button>
-              {% if name %}
-            <center>
-                <audio controls>
-                    <source src="gttsspeech.mp3" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                  </audio>
-            </center> 
-
-          {% endif %}
-          </form>
+          <div>
+            <h1>Plant Species Predictor</h1>
+            <br>
+              <form action="/result"method="post">
+                <input type="text" name="SepalLength" placeholder="SepalLength" required="required" />
+                <input type="text" name="SepalWidth" placeholder="SepalWidth" required="required" />
+                <input type="text" name="PetalLength" placeholder="PetalLength" required="required" />
+                <input type="text" name="PetalWidth" placeholder="PetalWidth" required="required" />
+          
+                <button type="submit">Predict</button>
+              </form>
+          
+             <br>
+             <h2>{{ name }}</h2>
+           </div>
         </main>
-        
+      
       </body>
 </html>
